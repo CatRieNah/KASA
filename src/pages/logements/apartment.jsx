@@ -1,6 +1,6 @@
 import Header from "../../components/header"
 import Footer from "../../components/footer"
-function About(){
+function Apartement(){
     return (
         <>
             <Header />
@@ -11,4 +11,4 @@ function About(){
         </>
     )
 }
-export default About
+export default Apartement

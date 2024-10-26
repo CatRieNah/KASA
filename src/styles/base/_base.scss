@@ -19,31 +19,6 @@ a{
     text-decoration:none;
     color: inherit;
 }
-.title{
-    color: #FFF;
-    width: 100%;
-    height: 220px;
-    border-radius: 25px;
-    background-image: url("./assets/bgTitle.png");
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    place-items: center;
-    filter:drop-shadow(0 4px 4px rgba(0,0,0,.25)) ;
-    overflow: hidden;
-    margin-bottom: 35px;
-    &::after{
-        position: absolute;
-        content: "";
-        inset: 0;
-        background-color: rgba(0,0,0,.6);
-        z-index: 1;
-    }
-    h1{
-        font-size: 48px;
-        z-index: 2;
-    }
-}
 ul{
     list-style: none;
 }

@@ -1,14 +1,15 @@
 import Header from "../../components/header"
-import Footer from "../../components/footer"
+import Banner from "../../components/banner"
+import bannerImage from "../../assets/bannerHome.png"
 import ApartList from "../../components/apartList"
+import Footer from "../../components/footer"
+
 function Home(){
     return (
         <>
             <Header />
             <main>
-                <div className="title">
-                    <h1>Chez vous, partout et ailleurs</h1>
-                </div>
+                <Banner title="Chez vous,partout et ailleurs " imageUrl={bannerImage} />
                 <div className="apartList">
                     <ApartList />
                 </div>

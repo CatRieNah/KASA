@@ -21,32 +21,6 @@ a {
   color: inherit;
 }
 
-.title {
-  color: #FFF;
-  width: 100%;
-  height: 220px;
-  border-radius: 25px;
-  background-image: url("./assets/bgTitle.png");
-  background-size: cover;
-  background-position: center;
-  display: grid;
-  place-items: center;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-  overflow: hidden;
-  margin-bottom: 35px;
-}
-.title::after {
-  position: absolute;
-  content: "";
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-.title h1 {
-  font-size: 48px;
-  z-index: 2;
-}
-
 ul {
   list-style: none;
 }
@@ -67,6 +41,32 @@ header nav {
 header nav a {
   font-size: 24px;
   font-weight: 500;
+}
+
+.banner {
+  color: #FFF;
+  width: 100%;
+  height: 220px;
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  overflow: hidden;
+  margin-bottom: 35px;
+  position: relative;
+}
+.banner::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.banner h1 {
+  font-size: 48px;
+  z-index: 2;
 }
 
 footer {
@@ -114,12 +114,51 @@ footer p {
   left: 15px;
   right: 15px;
   font-size: 18px;
-  color: #fff;
+  color: rgb(255, 255, 255);
   padding: 10px;
   border-radius: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.dropDown-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dropDown {
+  background: rgba(246, 246, 246, 0.45);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.dropDown-title {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(255, 96, 96);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 5px;
+}
+.dropDown-title h2 {
+  font-size: 18px;
+  color: #fff;
+}
+.dropDown-title button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+.dropDown-title button .fa-chevron-down {
+  font-size: 24px;
+  font-weight: 900;
+}
+.dropDown p {
+  margin-top: 10px;
+  color: #000;
+  line-height: 1.5em;
+  padding: 15px;
 }
 
 /*# sourceMappingURL=index.css.map */

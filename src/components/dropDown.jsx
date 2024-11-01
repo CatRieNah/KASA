@@ -1,52 +1,38 @@
-function DropDown(){
-    return(
+import { useState } from "react";
+
+function DropDown({ title, content }) {
+    const [openIndex, setOpenIndex] = useState(null); // null par défaut pour qu'aucun élément ne soit ouvert
+
+    const toggleOpen = (index) => {
+        setOpenIndex(previousIndex => (previousIndex === index ? null : index));
+    };
+
+    return (
         <div className="dropDown-container">
             <div className="dropDown">
                 <div className="dropDown-title">
-                    <h2>Fiabilité</h2>
-                    <button>
-                        <i className="fa-solid fa-chevron-down"></i>
+                    <h2>{title}</h2>
+                    <button onClick={() => toggleOpen(0)}> {/* On n'a qu'un seul dropdown ici */}
+                        <i className={`fa-solid fa-chevron-down ${openIndex === 0 ? 'rotated' : ''}`}></i>
                     </button>
                 </div>
-                <p>
-                    Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.
-                </p>
+                {/* Afficher le contenu en tant que liste si c'est un tableau */}
+                {openIndex === 0 && (
+                    <div>
+                        {Array.isArray(content) ? ( // Vérifie si le contenu est un tableau
+                            <ul>
+                                {content.map((item, index) => (
+                                    <li key={index}>{item}</li> // Affiche chaque équipement dans une liste
+                                ))}
+                            </ul>
+                        ) : (
+                            <p>{content}</p> // Si ce n'est pas un tableau, l'affiche comme un texte
+                        )}
+                    </div>
+                )}
             </div>
-            <div className="dropDown">
-                <div className="dropDown-title">
-                    <h2>Fiabilité</h2>
-                    <button>
-                        <i className="fa-solid fa-chevron-down"></i>
-                    </button>
-                </div>
-                <p>
-                    La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
-                </p>
-            </div>
-            <div className="dropDown">
-                <div className="dropDown-title">
-                    <h2>Fiabilité</h2>
-                    <button>
-                        <i className="fa-solid fa-chevron-down"></i>
-                    </button>
-                </div>
-                <p>
-                    La qualité du service est au cœur de notre engagement chez Kasa. Nous veillons à ce que chaque interaction, que ce soit avec nos hôtes ou nos locataires, soit empreinte de respect et de bienveillance.
-                </p>
-            </div>
-            <div className="dropDown">
-                <div className="dropDown-title">
-                    <h2>Fiabilité</h2>
-                    <button>
-                        <i className="fa-solid fa-chevron-down"></i>
-                    </button>
-                </div>
-                <p>
-                    La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.
-                </p>
-            </div>
-            
         </div>
-    )
+    );
 }
-export default DropDown
+
+export default DropDown;

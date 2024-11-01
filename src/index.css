@@ -1,6 +1,8 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -9,11 +11,7 @@ body {
 }
 
 #root {
-  box-sizing: border-box;
   padding: 50px 100px;
-}
-#root > * {
-  margin-bottom: 35px;
 }
 
 a {
@@ -29,6 +27,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 35px;
 }
 header img {
   width: 200px;
@@ -79,6 +78,7 @@ footer {
   height: 200px;
   color: #fff;
   gap: 30px;
+  margin-top: 35px;
 }
 footer p {
   font-size: 24px;
@@ -126,6 +126,7 @@ footer p {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 0 100px;
 }
 
 .dropDown {
@@ -159,6 +160,31 @@ footer p {
   color: #000;
   line-height: 1.5em;
   padding: 15px;
+}
+
+.rotated {
+  transform: rotate(180deg); /* Pivote le chevron vers le haut quand l'élément est ouvert */
+  transition: transform 0.3s ease;
+}
+
+.error {
+  text-align: center;
+}
+.error > * {
+  margin-bottom: 35px;
+}
+.error img {
+  width: 200px;
+  object-fit: cover;
+}
+.error p {
+  font-size: 36px;
+  font-weight: 500;
+  color: rgb(255, 96, 96);
+}
+.error a {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=index.css.map */

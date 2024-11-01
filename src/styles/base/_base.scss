@@ -1,20 +1,16 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
 }
 #root {
-    box-sizing: border-box;
     padding: 50px 100px;
-
-    // Sélecteur pour tous les enfants directs de #root
-    > * {
-        margin-bottom: 35px;
-    }
 }
+
 a{
     text-decoration:none;
     color: inherit;

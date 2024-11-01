@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column; 
     gap: 20px; 
+    padding: 0 100px;
 }
 .dropDown{
     background: rgba(246, 246, 246, 0.45);
@@ -35,6 +36,8 @@
         line-height: 1.5em;
         padding: 15px;
     }
-    
-
+}
+.rotated {
+    transform: rotate(180deg); /* Pivote le chevron vers le haut quand l'élément est ouvert */
+    transition: transform 0.3s ease;
 }

@@ -24,17 +24,13 @@ function Carousel({ pictures, }) {
             <img src={pictures[currentIndex]} alt="Logement" className="carousel-image" />
 
             {pictures.length > 1 && (
-                <div className="carousel-controls">
+                <div className="carousel-button">
                     <button
-                        aria-label="Previous image"
-                        className="carousel-control carousel-control-prev"
                         onClick={prevImage}
                     >
                         <i className="fa-solid fa-chevron-left"></i>
                     </button>
                     <button
-                        aria-label="Next image"
-                        className="carousel-control carousel-control-next"
                         onClick={nextImage}
                     >
                         <i className="fa-solid fa-chevron-right"></i>

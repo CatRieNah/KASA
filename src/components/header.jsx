@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png"
+import logo from "../assets/logo-header.png"
 import { Link,useLocation } from "react-router-dom"
 import { useState } from "react"
 
@@ -16,7 +16,7 @@ function Header(){
                     onClick={() => handleLinkClick("/")} 
                     style = {{textDecoration : activeLink === "/" ? "underline" : "none"}}
                 >
-                    Acceuil
+                    Accueil
                 </Link>
                 <Link to="/aboutPage"
                     onClick={() => handleLinkClick("/aboutPage")} 

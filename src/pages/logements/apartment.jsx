@@ -11,6 +11,7 @@ function Apartement({pictures,title,location,tags,host,}) {
     const item = data.find(element => element.id === id);
     console.log(item); // Vérifiez le contenu de l'item
     console.log(item.equipements); // Vérifiez le contenu des équipements
+    
     return (
         <>
             <Header />
